@@ -1,0 +1,54 @@
+<html>
+<head>
+  <style type="text/css">
+  .boton_1{
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 20px;
+    color:#333333;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color:#FFD27D;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+  }
+  .boton_1:hover{
+    opacity:0.8
+  }
+
+
+  body{
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+</style>
+</head>
+<body>
+
+<center><p class="Experior"><font color="yellow"><font size="10"><h1>Experior</h1></font></font></p>
+
+<br><br><br><br>
+
+
+<form name="menuform">
+      <select name="menu" class="boton_1" onChange="top.location.href = this.form.menu.options[this.form.menu.selectedIndex].value; ">
+         <option value="">Regístrate</option>
+         <option value="registro_usuario.html" >Usuario</option>
+         <option value="registro_empresa.html" >Empresa</option>
+      </select>
+</form>
+<br><br><br><br><br><br>
+<button class="boton_1">Iniciar sesión</button>
+
+</center>
+
+</body>
+
+</html>
