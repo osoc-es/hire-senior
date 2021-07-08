@@ -1,0 +1,105 @@
+<html>
+<head>
+  <style type="text/css">
+  .boton_1{
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 20px;
+    color:#333333;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color:#FFD27D;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+  }
+  .boton_1:hover{
+    opacity:0.8
+  }
+
+    .guardar {background-color: #4CAF50;
+        border-radius: 50%;
+        font-size: 34px;} /* Green */
+    .guardar:hover {
+        background-color: #4CAF50; /* Green */
+        color: blue;
+    }
+    .cancelar {background-color: #f44336;
+        border-radius: 50%;
+        font-size: 34px;} /* Red */
+    .cancelar:hover{
+        background-color: #e7e7e7; /* grey */
+        color: red;
+    }
+
+</style>
+</head>
+<body>
+
+<center><u><p class="Experior"><font color="yellow"><font size="10"><h1>Registro de usuario</h1></font></font></p></u></center>
+
+<font face="Comic Sans MS,Arial,Verdana">Ingrese sus datos personales para hacer un uso eficiente de la busqueda</font>
+<br><br>
+<form action="{% url 'index' %}" method="post">
+{% csrf_token %}
+Nombre:<br>
+    <input type="text" size="15" maxlength="30"  name="nombre"><br><br>
+Apellidos:<br>
+    <input type="text" size="15" maxlength="30"  name="apellidos"><br><br>
+
+<hr/>
+
+<u><h3>Lugar de residencia:<br></h3></u>
+<pre>
+    <li type="disc">País:</li>
+    <input type="text" size="15" maxlength="30"  name="pais"><br>
+    <li type="disc">Calle:</li>
+    <input type="text" size="15" maxlength="30"  name="calle"><br>
+    <li type="disc">Número:</li>
+    <input type="text" size="15" maxlength="30"  name="numero"><br>
+    <li type="disc">Ciudad:</li>
+    <input type="text" size="15" maxlength="30"  name="ciudad"><br>
+</pre>
+
+<hr/>
+
+CV:<br>
+<input name="archivo" type="file" /><br><br>
+
+<u><h3>Experiencia laboral:<br></h3></u>
+<pre>
+    <li type="disc">Tipo de posición:</li>
+    <input type="text" size="15" maxlength="30"  name="tipodeposicion"><br>
+    <li type="disc">Empresa:</li>
+    <input type="text" size="15" maxlength="30"  name="empresa"><br>
+    <li type="disc">Duración:</li>
+    <input type="text" size="15" maxlength="30"  name="duracion"><br>
+</pre>
+
+<hr/>
+
+Educacion:<br>
+<form name="menuform">
+      <select name="educacion">
+         <option>Primaria</option>
+         <option>ESO</option>
+         <option>Bachiller</option>
+      </select>
+</form>
+
+Voluntariado:<br>
+    <input type="text" size="15" maxlength="30"  name="nombre"><br><br>
+
+<br><br><br><br>
+
+<center>
+<button class="guardar" type="submit">Guardar</button>
+<button class="cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+</center>
+</form>
+</body>
+
+</html>
