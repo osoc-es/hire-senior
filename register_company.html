@@ -1,0 +1,95 @@
+<html>
+<head>
+  <style type="text/css">
+  .boton_1{
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 20px;
+    color:#333333;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color:#FFD27D;
+    border-color: #d8d8d8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius:35px;
+  }
+  .boton_1:hover{
+    opacity:0.8
+  }
+
+   .guardar {background-color: #4CAF50;/*Green*/
+        border-radius: 50%;
+        font-size: 34px;
+    }
+   .guardar:hover {
+        background-color: #4CAF50; /* Green */
+        color: blue;
+    }
+    .cancelar {background-color: #f44336;/*Red*/
+        border-radius: 50%;
+        font-size: 34px;} /* Red */
+    .cancelar:hover{
+        background-color: #e7e7e7; /* grey */
+        color: red;
+    }
+
+</style>
+</head>
+<body>
+
+<center><u><p class="Experior"><font color="yellow"><font size="10"><h1>Registro de empresa</h1></font></font></p></u></center>
+<font face="Comic Sans MS,Arial,Verdana">Ingrese sus datos empresariales para hacer un uso eficiente de la busqueda</font>
+<br><br>
+<form action="{% url 'index' %}" method="post">
+Nombre de la empresa:<br>
+    <input type="text" size="15" maxlength="30"  name="nombre"><br><br>
+Descripción:<br>
+    <textarea name="descripcion" rows="10" cols="40"></textarea><br><br>
+
+<hr/>
+
+Sector:<br>
+    <input type="text" size="15" maxlength="30"  name="sector"><br><br>
+
+<hr/>
+
+<u><h3>Ubicación:<br></h3></u>
+<pre>
+    <li type="disc">País:</li>
+    <input type="text" size="15" maxlength="30"  name="tipodeposicion"><br>
+    <li type="disc">Calle:</li>
+    <input type="text" size="15" maxlength="30"  name="empresa"><br>
+    <li type="disc">Número:</li>
+    <input type="text" size="15" maxlength="30"  name="duracion"><br>
+    <li type="disc">Ciudad:</li>
+    <input type="text" size="15" maxlength="30"  name="duracion"><br>
+</pre>
+
+<hr/>
+
+
+
+
+<hr/>
+
+Número de empleados:<br>
+    <input type="text" size="15" maxlength="30"  name="nombre"><br><br>
+
+Sitio Web(URL):<br>
+    <input type="text" size="50" maxlength="200"  name="nombre"><br><br>
+
+
+
+<br><br><br><br>
+
+<center>
+<button class="guardar" type="submit">Guardar</button>
+<button class="cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+</center>
+</form>
+</body>
+
+</html>
