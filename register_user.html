@@ -40,69 +40,21 @@
 <body>
 
 <center><u><p class="Experior"><font color="yellow"><font size="10"><h1>Registro de usuario</h1></font></font></p></u></center>
-  
-<div id="google_translate_element" class="google" align="right"></div>
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-	new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'ca,eu,gl,en,fr,it,pt,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
-        }
-</script>
-
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 
 <font face="Comic Sans MS,Arial,Verdana">Ingrese sus datos personales para hacer un uso eficiente de la busqueda</font>
 <br><br>
-<form action="{% url 'index' %}" method="post">
+<form action="{% url 'register_user' %}" method="post">
 {% csrf_token %}
 Nombre:<br>
     <input type="text" size="15" maxlength="30"  name="nombre"><br><br>
 Apellidos:<br>
     <input type="text" size="15" maxlength="30"  name="apellidos"><br><br>
 
-<hr/>
-
-<u><h3>Lugar de residencia:<br></h3></u>
-<pre>
-    <li type="disc">País:</li>
-    <input type="text" size="15" maxlength="30"  name="pais"><br>
-    <li type="disc">Calle:</li>
-    <input type="text" size="15" maxlength="30"  name="calle"><br>
-    <li type="disc">Número:</li>
-    <input type="text" size="15" maxlength="30"  name="numero"><br>
-    <li type="disc">Ciudad:</li>
-    <input type="text" size="15" maxlength="30"  name="ciudad"><br>
-</pre>
-
-<hr/>
-
-CV:<br>
-<input name="archivo" type="file" /><br><br>
-
-<u><h3>Experiencia laboral:<br></h3></u>
-<pre>
-    <li type="disc">Tipo de posición:</li>
-    <input type="text" size="15" maxlength="30"  name="tipodeposicion"><br>
-    <li type="disc">Empresa:</li>
-    <input type="text" size="15" maxlength="30"  name="empresa"><br>
-    <li type="disc">Duración:</li>
-    <input type="text" size="15" maxlength="30"  name="duracion"><br>
-</pre>
-
-<hr/>
-
-Educacion(Primaria,ESO,Bachiller):<br>
-    <input type="text" size="15" maxlength="30"  name="nombre"><br><br>
-
-Voluntariado:<br>
-    <input type="text" size="15" maxlength="30"  name="nombre"><br><br>
-
 <br><br><br><br>
 
 <center>
 <button class="guardar" type="submit">Guardar</button>
-<button class="cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+<button class="cancelar" onclick="window.location.href='/'">Cancelar</button>
 </center>
 </form>
 </body>
