@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+
+    <title>Experior - Registro de Usuario</title>
+  </head>
+  <body>
+    <form action="{% url 'register_user' %}" method="post">
+      {% csrf_token %}
+    <div class="container" id="paso1">
+      <div class="card w-100 bg-info border-success" style="width: 18rem;">
+        <img src="experior_logo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-secondary">Primero dinos tu nombre</h5>
+            <div class="mb-3">
+              <label for="name" class="form-label text-secondary">Nombre: </label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="1st_last_Name" class="form-label text-secondary">Primer apellido: </label>
+              <input type="text" class="form-control" id="1st_last_Name">
+            </div>
+            <div class="mb-3">
+              <label for="2nd_last_Name" class="form-label text-secondary">Segundo apellido: </label>
+              <input type="text" class="form-control" id="2nd_last_Name">
+            </div>
+           <a id="paso1apaso2" class="btn btn-primary w-100" onclick="paso1apaso2()">Siguiente ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-none" id="paso2">
+      <div class="card w-100" style="width: 18rem;">
+        <img src="experior_logo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">¡Hola, <span id="nombreCompleto"></span>! Vamos a crear tu cuenta</h5>
+            <div class="mb-3">
+              <label for="mobile_number" class="form-label">Número de teléfono: </label>
+              <input type="number" class="form-control" id="mobile_number">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico: </label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="username" class="form-label">Usuario: </label>
+              <input type="text" class="form-control" id="username">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña: </label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <a id="paso2apaso3" class="btn btn-primary w-100" onclick="paso2apaso3()">Siguiente ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-none" id="paso3">
+      <div class="card w-100" style="width: 18rem;">
+        <img src="experior_logo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">¡Genial, <span id="nombreUsuario1"></span>! Ahora queremos saber dónde estás </h5>
+            <div class="mb-3">
+              <label for="country" class="form-label">País: </label>
+              <input type="text" class="form-control" id="country">
+            </div>
+            <div class="mb-3">
+              <label for="street" class="form-label">Calle: </label>
+              <input type="text" class="form-control" id="street">
+            </div>
+            <div class="mb-3">
+              <label for="number" class="form-label">Número: </label>
+              <input type="number" class="form-control" id="number">
+            </div>
+            <div class="mb-3">
+              <label for="city" class="form-label">Ciudad: </label>
+              <input type="text" class="form-control" id="city">
+            </div>
+            <div class="mb-3">
+              <label for="postal_code" class="form-label">Código postal: </label>
+              <input type="number" class="form-control" id="postal_code">
+            </div>
+            <a id="paso3apaso4" class="btn btn-primary w-100" onclick="paso3apaso4()">Siguiente ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-none" id="paso4">
+      <div class="card w-100" style="width: 18rem;">
+        <img src="experior_logo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><span id="nombreUsuario2"></span>, cuéntanos tu última experiencia profesional</h5>
+            <div class="mb-3">
+              <label for="company" class="form-label">Compañia: </label>
+              <input type="text" class="form-control" id="company">
+            </div>
+            <div class="mb-3">
+              <label for="position" class="form-label">Posicion: </label>
+              <input type="text" class="form-control" id="position">
+            </div>
+            <div class="mb-3">
+              <label for="period">¿Cuánto tiempo?</label>
+              <select name="period" id="period">
+                <option value="menos5">Menos de 5 años</option>
+                <option value="5a10">Entre 5 y 10 años</option>
+                <option value="10a15">Entre 10 a 15 años</option>
+                <option value="mas15">Más de 15 años</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Describe brevemente qué hiciste en ese tiempo: </label>
+                <textarea class="form-control" aria-label=""></textarea>
+            </div>
+            <a id="paso4apaso5" class="btn btn-primary w-100" onclick="paso4apaso5()">Siguiente ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-none" id="paso5">
+      <div class="card w-100" style="width: 18rem;">
+        <img src="experior_logo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><span id="nombreUsuario3"></span>, cuéntanos qué buscas en Experior</h5>
+
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="continuarSector">
+                <label class="form-check-label" for="continuarSector">
+                  Continuar desarrollándome en el sector
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="aportarFormacion">
+                <label class="form-check-label" for="aportarFormacion">
+                  Aportar mi experiencia a gente en formación
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="integrarEmpresa">
+                <label class="form-check-label" for="integrarEmpresa">
+                  Ayudar a integrarse a nuevos trabajadores
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="otraOpcion">
+                <label class="form-check-label" for="otraOpcion">
+                  Otra opción
+                </label>
+              </div>
+            </div>
+            <button type="submit" id="paso5aenviar" class="btn btn-primary w-100">Siguiente ></button> 
+        </div>
+      </div>
+    </div>
+</form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="register_user.js"></script>
+  </body>
+</html>
