@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <div class="card w-100" style="width: 18rem;">
-        <img src="experior_logo.png" class="card-img-top" alt="...">
+        {% load static %}<img src="{% static 'app1/image/experior_logo.png' %}" class="card-img-top" alt="...">
         <div class="card-body">
          <div class="accordion" id="accordionExample">
           <div class="accordion-item">
@@ -48,8 +48,8 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <button type="button" class="btn btn-primary w-100">Soy Senior, quiero aportar</button>
-                <button type="button" class="btn btn-primary w-100 mt-2">Soy Empresa, busco experiencia</button>
+                <button type="button" class="btn btn-primary w-100" onclick = "window.location.href='/register/user'">Soy Senior, quiero aportar</button>
+                <button type="button" class="btn btn-primary w-100 mt-2" onclick = "window.location.href='/register/company'">Soy Empresa, busco experiencia</button>
               </div>
             </div>
           </div>
