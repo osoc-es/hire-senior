@@ -33,6 +33,7 @@
               <label for="2nd_last_Name" class="form-label text-secondary">Segundo apellido: </label>
               <input type="text" class="form-control" id="2nd_last_Name" name="last_name2">
             </div>
+           <a id="pasoPagIndex" class="btn btn-primary w-100" onclick="pasoPagIndex()">Retroceder ></a>
            <a id="paso1apaso2" class="btn btn-primary w-100" onclick="paso1apaso2()">Siguiente ></a>
         </div>
       </div>
@@ -43,6 +44,10 @@
         {% load static %}<img src="{% static 'app1/image/experior_logo.png' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">¡Hola, <span id="nombreCompleto"></span>! Vamos a crear tu cuenta</h5>
+             <div class="mb-3">
+              <label for="age" class="form-label">Edad:</label><br>
+              <input type="number" class="form-control" id="age">
+            </div>
             <div class="mb-3">
               <label for="mobile_number" class="form-label">Número de teléfono: </label>
               <input type="number" class="form-control" id="mobile_number" name="mobile_number">
@@ -59,6 +64,7 @@
               <label for="password" class="form-label">Contraseña: </label>
               <input type="password" class="form-control" id="password" name="password">
             </div>
+            <a id="paso2apaso1" class="btn btn-primary w-100" onclick="paso2apaso1()">Retroceder ></a>
             <a id="paso2apaso3" class="btn btn-primary w-100" onclick="paso2apaso3()">Siguiente ></a>
         </div>
       </div>
@@ -89,6 +95,7 @@
               <label for="postal_code" class="form-label">Código postal: </label>
               <input type="number" class="form-control" id="postal_code" name="postal_code">
             </div>
+            <a id="paso3apaso2" class="btn btn-primary w-100" onclick="paso3apaso2()">Retroceder ></a>
             <a id="paso3apaso4" class="btn btn-primary w-100" onclick="paso3apaso4()">Siguiente ></a>
         </div>
       </div>
@@ -120,6 +127,7 @@
               <label for="description" class="form-label">Describe brevemente qué hiciste en ese tiempo: </label>
                 <textarea class="form-control" aria-label="" name="job_description"></textarea>
             </div>
+            <a id="paso4apaso3" class="btn btn-primary w-100" onclick="paso4apaso3()">Retroceder ></a>
             <a id="paso4apaso5" class="btn btn-primary w-100" onclick="paso4apaso5()">Siguiente ></a>
         </div>
       </div>
