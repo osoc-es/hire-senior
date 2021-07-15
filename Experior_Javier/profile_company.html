@@ -60,15 +60,15 @@
               <div class="card-body">
                 <div class="form-group">
                   <label class="form-label">Nombre de la compañía</label>
-                  <input type="text" class="form-control mb-1" value="" name="company_name">
+                  <input type="text" class="form-control mb-1" value="{{ name }}" name="company_name">
                 </div>
                 <div class="form-group">
                   <label class="form-label">Descripción</label>
-                  <textarea name="description" rows="3" class="form-control mb-1"></textarea><br>
+                  <textarea name="description" rows="3" class="form-control mb-1">{{ description }}</textarea><br>
                 </div>
                 <div class="form-group">
                   <label class="form-label">Sector</label>
-                  <input type="text" class="form-control" value="" name="sector">
+                  <input type="text" class="form-control" value="{{ sector }}" name="sector">
                 </div>
                 <div class="form-group text-center">
                   <button type="submit" class="btn btn-primary" id="guardar-1" name="b1">Guardar</button>
@@ -107,25 +107,25 @@
 
                 <div class="form-group">
                   <label class="form-label">Descripción de la compañía</label>
-                  <textarea name="description" rows="3" class="form-control" id="descripcion"></textarea>
+                  <textarea name="description" rows="3" class="form-control" id="descripcion">{{ description }}</textarea>
                 </div>
 
                 <div class="form-group">
                   <ul class="list-unstyled">
                   <li>Ubicación
                     <ul>
-                      <li>País:<input class="form-control" type="text" size="15" maxlength="30" name="country" value=""></li>
-                      <li>Calle:<input class="form-control" type="text" size="15" maxlength="30" name="street" value=""></li>
-                      <li>Número:<input class="form-control" type="text" size="15" maxlength="30" name="st_number" value=""></li>
-                      <li>Ciudad:<input class="form-control" type="text" size="15" maxlength="30" name="city" value=""></li>
+                      <li>País:<input class="form-control" type="text" size="15" maxlength="30" name="country" value="{{ country }}"></li>
+                      <li>Calle:<input class="form-control" type="text" size="15" maxlength="30" name="street" value="{{ street }}"></li>
+                      <li>Número:<input class="form-control" type="text" size="15" maxlength="30" name="st_number" value="{{ st_number }}"></li>
+                      <li>Ciudad:<input class="form-control" type="text" size="15" maxlength="30" name="city" value="{{ city }}"></li>
                     </ul>
                   </li>
                 </ul>
                 </div>
 
                 <div class="form-group">
-                 Número de empleados<input class="form-control" type="text" size="15" maxlength="30" name="no_employees" value=""><br>
-                 Sitio web (URL)<input class="form-control" type="text" size="15" maxlength="30" name="website" value=""><br>
+                 Número de empleados<input class="form-control" type="text" size="15" maxlength="30" name="no_employees" value="{{ no_employees }}"><br>
+                 Sitio web (URL)<input class="form-control" type="text" size="15" maxlength="30" name="website" value="{{ website }}"><br>
                 </div>
 
                 <div class="form-group text-center">
