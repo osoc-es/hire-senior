@@ -17,14 +17,15 @@
 </head>
 <body style="background-color:#bf7878;">
 
-<div class="text-center">
-  {% load static %}<img src="{% static 'app1/image/experior_logo.png' %}" class="img-thumbnail">
-</div>
+
 
 <form method="post">
 {% csrf_token %}
 
 <div class="container bg-info text-secondary">
+   <div class="text-center">
+     {% load static %}<img src="{% static 'app1/image/experior_logo.png' %}" class="img-thumbnail">
+   </div>
     <div class="row d-block" id="primero">
         <div class="row">
             <div class="col text-left">
