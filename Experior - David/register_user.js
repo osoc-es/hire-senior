@@ -20,6 +20,13 @@ function paso2apaso3() {
 	document.getElementById('nombreUsuario3').innerHTML = document.getElementById('username').value;
 }
 
+function paso3apaso4() {
+
+    document.getElementById("tercero").className="row d-none";
+    document.getElementById("cuarto").className="row d-block";
+
+}
+
 
 /////////////////////////////Retroceder///////////////////////////////
 
@@ -31,7 +38,7 @@ function paso2apaso1() {
 
 
 
-	}
+}
 
 function paso3apaso2() {
 
@@ -42,4 +49,12 @@ function paso3apaso2() {
 	document.getElementById('nombreUsuario1').innerHTML = document.getElementById('username').value;
 	document.getElementById('nombreUsuario2').innerHTML = document.getElementById('username').value;
 	document.getElementById('nombreUsuario3').innerHTML = document.getElementById('username').value;
+}
+
+function paso4apaso3() {
+
+    document.getElementById("tercero").className="row d-block";
+    document.getElementById("cuarto").className="row d-none";
+
+
 }
